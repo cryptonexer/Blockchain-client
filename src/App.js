@@ -32,7 +32,7 @@ function App() {
             <Route path="/Voter/VoterDetails" element={<VoterDetails />}/>
             <Route path='/Voter/auth' element={<VoterAuth/>}/>
 
-            <Route path='/admin/uyqeyuqw/daguasgdgai/afsdtasfdu' element={<Details/>}/>
+            <Route path='/admin' element={<Details/>}/>
             <Route path='/adminlogin' element={<Adlogin/>}/>
             <Route path='/partydetail' element={<Pdetails/>}/>
             <Route path='/party/auth' element={<PartyAuth/>}/>

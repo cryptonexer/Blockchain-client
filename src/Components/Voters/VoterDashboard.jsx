@@ -13,7 +13,7 @@ const VoterDashboard = () => {
     
 
     const Welcome = async () => {
-        const req = await fetch('http://localhost:3002/api/voter/me',{
+        const req = await fetch('http://13.233.237.111:3002/api/voter/me',{
             headers:{
                 'x-access-token' : localStorage.getItem('token'),
             }
