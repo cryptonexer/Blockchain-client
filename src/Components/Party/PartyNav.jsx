@@ -17,7 +17,7 @@ const Topbar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
 
-                  <LinkContainer to="/Party/dashboard">
+                  <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
                   </LinkContainer>
 
@@ -27,7 +27,7 @@ const Topbar = () => {
 
                   {
                   localStorage.getItem('token') && (
-                    <LinkContainer to="/Party/partylogin" onClick={logout}>
+                    <LinkContainer to="/partylogin" onClick={logout}>
                     <Nav.Link>Logout</Nav.Link>
                     </LinkContainer> )
                   }

@@ -19,7 +19,7 @@ const Partyreg = () => {
     const Postdata = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://13.233.237.111:3002/api/party/register',{
+        const response = await fetch('http://localhost:3002/api/party/register',{
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'
@@ -50,7 +50,7 @@ const Partyreg = () => {
         }
         else{
              alert('Registered Successfully');
-             navigate('/Party/partylogin');
+             navigate('/partylogin');
         }
     }
     }
@@ -128,9 +128,12 @@ const Partyreg = () => {
                     <center>
                         <button type="submit" name="signup" id="signup" className="form-submit   btn btn-primary mt-3" value="Register" onClick={Postdata}>Register</button>
                         <br/>
-                        <LinkContainer to="/Party/partylogin">
+                        <LinkContainer to="/partylogin">
                             <a className="loginroute">Login if Already registered</a>
-                        </LinkContainer>
+                        </LinkContainer><br></br>
+                        <LinkContainer to="/">
+                        <button>Home</button>
+                    </LinkContainer>
                     </center>
                 </Form>
                 </Container>

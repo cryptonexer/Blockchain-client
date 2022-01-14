@@ -20,16 +20,16 @@ function App() {
   return (
        <Router>
           <Routes>
-            <Route path="/" element={<Partylogin/>} />
-            <Route path="/Party/Dashboard" element={<PartyDashboard/>} />
-            <Route path="/Party/partyreg" element={<Partyreg/>} />
-            <Route path="/Party/partylogin" element={<Partylogin/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/PartyDashboard" element={<PartyDashboard/>} />
+            <Route path="/partyreg" element={<Partyreg/>} />
+            <Route path="/partylogin" element={<Partylogin/>} />
             
             <Route path="/Voter/" element={<Voterlogin />}/>
-            <Route path="/Voter/Dashboard" element={<VoterDashboard />}/>
-            <Route path="/Voter/VoterReg" element={<Voterreg />}/>
-            <Route path="/Voter/VoterLogin" element={<Voterlogin />}/>
-            <Route path="/Voter/VoterDetails" element={<VoterDetails />}/>
+            <Route path="/VoterDashboard" element={<VoterDashboard />}/>
+            <Route path="/VoterReg" element={<Voterreg />}/>
+            <Route path="/VoterLogin" element={<Voterlogin />}/>
+            <Route path="/VoterDetails" element={<VoterDetails />}/>
             <Route path='/Voter/auth' element={<VoterAuth/>}/>
 
             <Route path='/admin' element={<Details/>}/>

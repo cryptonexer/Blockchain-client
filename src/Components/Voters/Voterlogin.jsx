@@ -13,7 +13,7 @@ const Voterlogin = () => {
     const Postdata = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://13.233.237.111:3002/api/voter/login',{
+        const response = await fetch('http://localhost:3002/api/voter/login',{
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'
@@ -60,8 +60,11 @@ const Voterlogin = () => {
                 <center>
                     <input type="submit" name="signup" id="signup" className="form-submit btn btn-primary mt-4 mb-3" value="Login" onClick={Postdata}/>
                     <br/>
-                    <LinkContainer to="/Voter/Voterreg">
+                    <LinkContainer to="/Voterreg">
                         <a className="loginroute">Register for new member</a>
+                    </LinkContainer><br></br>
+                    <LinkContainer to="/">
+                        <button>Home</button>
                     </LinkContainer>
                 </center>
             </Form>

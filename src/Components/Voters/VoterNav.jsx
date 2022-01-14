@@ -17,17 +17,17 @@ const Topbar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
 
-                  <LinkContainer to="/Voter/dashboard">
+                  <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
                   </LinkContainer>
 
-                  <LinkContainer to="/Voter/VoterDetails">
+                  <LinkContainer to="/VoterDetails">
                   <Nav.Link>For Voter</Nav.Link>
                   </LinkContainer>
 
                   {
                   localStorage.getItem('token') && (
-                    <LinkContainer to="/Voter/Voterlogin" onClick={logout}>
+                    <LinkContainer to="/Voterlogin" onClick={logout}>
                     <Nav.Link>Logout</Nav.Link>
                     </LinkContainer> )
                   }

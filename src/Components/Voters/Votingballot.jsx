@@ -10,7 +10,7 @@ const Votingballot = (props) => {
     //fetching all details related to active members
     useEffect(async () => {
         try {
-            const res = await axios.get('http://13.233.237.111:3002/api/activeUsers');
+            const res = await axios.get('http://localhost:3002/api/activeUsers');
             setUsers(res.data.data1);
         } catch (error) {
             console.log(error)
@@ -24,7 +24,7 @@ const Votingballot = (props) => {
         try{
         
             {
-                const req = axios.put(`http://13.233.237.111:3002/voteballot/vote/${_id}`);
+                const req = axios.put(`http://localhost:3002/voteballot/vote/${_id}`);
     
                 const votinguser = req.json();
                 if(votinguser.status == 'ok')

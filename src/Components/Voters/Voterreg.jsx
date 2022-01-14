@@ -24,7 +24,7 @@ const Voterreg = () => {
     const Postdata = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://13.233.237.111:3002/api/voter/register',{
+        const response = await fetch('http://localhost:3002/api/voter/register',{
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'
@@ -60,7 +60,7 @@ const Voterreg = () => {
         }
         else{
              alert('Registered Successfully');
-             navigate('/Voter/Voterlogin');
+             navigate('/Voterlogin');
         }
     }
     }
@@ -180,9 +180,12 @@ const Voterreg = () => {
                     <center>
                         <button type="submit" name="signup" id="signup" className="form-submit   btn btn-primary mt-3" value="Register" onClick={Postdata}>Register</button>
                         <br/>
-                        <LinkContainer to="/Voterlogin">
+                        <LinkContainer to="/VoterLogin">
                             <a className="loginroute">Login if Already registered</a>
-                        </LinkContainer>
+                        </LinkContainer><br></br>
+                        <LinkContainer to="/">
+                        <button>Home</button>
+                    </LinkContainer>
                     </center>
                 </Form>
                 </Container>

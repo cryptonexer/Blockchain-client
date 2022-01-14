@@ -10,7 +10,7 @@ const Auth = () => {
             window.alert('Invalid User Please Register');
         }
         else{
-            window.location.href = '/Party/Dashboard'
+            window.location.href = '/PartyDashboard'
         }
     }, [])
 
