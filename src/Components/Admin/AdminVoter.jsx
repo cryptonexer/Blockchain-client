@@ -12,7 +12,7 @@ function AdminVoter() {
   const [checkStat, setCheckStat] = useState('');
 
   const Verify = async (_id) => {
-      const response = await axios.put(`http://localhost:3002/api/Voter/verify`, {
+      const response = await axios.put(`http://13.233.237.111:3002/api/Voter/verify`, {
         id: _id
       });
   
