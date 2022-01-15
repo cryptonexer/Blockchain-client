@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 
-const Votingballot = (props) => {
+const Votingballot =  () => {
+    
 
     const [users, setUsers] = useState([]);
-    const [votinguser, setvotingUser] = useState([])
+    const [votinguser, setvotingUser] = useState('')
 
     //fetching all details related to active members
     useEffect(async () => {
@@ -19,26 +20,20 @@ const Votingballot = (props) => {
 
     function voting(_id)
     {
-        let email = props.email;
-        console.log(email);
+        
         try{
         
             {
-                const req = axios.put(`http://35.154.226.25:3002/voteballot/vote/${_id}`);
+                const requesting = axios.get(`http://35.154.226.25:3002/voteballot/vote/${_id}`); 
     
-                const votinguser = req.json();
-                if(votinguser.status == 'ok')
-                {
-                    alert('Vote Casted');
-                }
-                //setvotingUser((votinguser.result));
-    
-            }
+            }   
     
         }
         catch(err){
             if(err) throw err;
         }
+
+        window.location.reload(false);
 
     }
     
@@ -63,6 +58,10 @@ const Votingballot = (props) => {
                                             <Card.Text>
                                                 {user.Description}
                                             </Card.Text>
+                                            <Card.Text>
+                                                
+                                                {user.Count}
+                                            </Card.Text>
                                             
                                             <Button variant="primary" onClick={() => { voting(user._id) }}>Cast Vote</Button>
                                         </Card.Body>
@@ -72,7 +71,7 @@ const Votingballot = (props) => {
                         })
                         }
                     </Row>
-                    Count: {votinguser.Party_name}
+                    
                 </Container>
                 
             </div>

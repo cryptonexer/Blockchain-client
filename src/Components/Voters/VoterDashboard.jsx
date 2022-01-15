@@ -5,7 +5,8 @@ import './Voter.css'
 import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 import Ballot from './Votingballot'
-
+const host = process.env.HOST
+console.log(process.env.HOST);
 
 const VoterDashboard = () => {
 
@@ -50,14 +51,19 @@ const VoterDashboard = () => {
         <>
          <div>
              <Nav/>
-         </div>   
+         </div> 
+         <Container>
          <div className='welcome-main'>
              <div className="welcome">
                 <h1>Welcome {userData.First_name} {userData.Last_name}</h1>
-                <p>Hello   {userData.Email} </p>
+                
              </div>
+             <p>{userData.Email} </p>
              <p>Profile Status: {userData.ProfileStatus}</p>
          </div> 
+            
+         </Container>  
+         
 
          {verification}
 

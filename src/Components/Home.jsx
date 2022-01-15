@@ -1,45 +1,62 @@
 import React from 'react'
-import { Container, Card, Button, Row, Col } from 'react-bootstrap'
-import {LinkContainer} from 'react-router-bootstrap'
+import './landingpage.css'
+import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
-const Home = () => {
+const LandingPage = () => {
     return (
         <>
-
-        <Container>
-            <h3>Cryptonex</h3>
-            <p>Blockchain Based Tech</p>
-            <Row>
-                <Col md={4}>
-                <LinkContainer to="/Voterreg">
-                        <button>Voter Reg</button>
-                    </LinkContainer><br></br><br></br>
-                    <LinkContainer to="/VoterLogin">
-                        <button>Voter Login</button>
-                    </LinkContainer><br></br><br></br>
-                    <LinkContainer to="/VoterDashboard">
-                        <button>Voter Dashboard</button>
-                    </LinkContainer>
-                </Col>
-                <Col md={4}>
-                <LinkContainer to="/partyreg">
-                        <button>Party Reg</button>
-                    </LinkContainer><br></br><br></br>
-                    <LinkContainer to="/partylogin">
-                        <button>Party Login</button>
-                    </LinkContainer>
-                </Col>
-                <Col md={4}>
-                <LinkContainer to="/admin">
-                        <button>Admin</button>
-                    </LinkContainer><br></br><br></br>
-                    
-                </Col>
-            </Row>
-        </Container>
-            
+        <div className="landingPage">
+           <Container>
+               <Row className='pt-3 logo'>
+                   <h2>Cryptonex</h2>
+                   <h6>Blockchain based tech</h6>
+               </Row>
+               <div className="Cards">
+               <Row className='row'>
+                   <Col md={4} >
+                       <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title className="mt-4 title"><center>Voters</center></Card.Title>
+                            <center>
+                            <LinkContainer to="/VoterLogin"><Button variant="primary" className="button1">Login</Button></LinkContainer>
+                             <br/>
+                             <LinkContainer to="/VoterReg"><Button variant="primary" className="button-2">Register</Button></LinkContainer>
+                            
+                            </center>
+                        </Card.Body>
+                        </Card>
+                   </Col>
+                   <Col md={4}>
+                   <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title className="mt-4 title"><center>Party/Candidate</center></Card.Title>
+                            <center>
+                            <LinkContainer to="/partylogin"><Button variant="primary" className="button1">Login</Button></LinkContainer>    
+                             <br/>
+                             <LinkContainer to="/partyreg"><Button variant="primary" className="button-2">Register</Button></LinkContainer>
+                            
+                            </center>
+                        </Card.Body>
+                        </Card>
+                   </Col>
+                   <Col md={4}>
+                   <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title className="mt-4 title"><center>Admin</center></Card.Title>
+                            <center>
+                                <LinkContainer to="/admin"><Button variant="primary" className="button1">Login</Button></LinkContainer>
+                             <br/>
+                            </center>
+                        </Card.Body>
+                        </Card>
+                   </Col>
+               </Row>
+               </div>
+            </Container> 
+        </div>  
         </>
     )
 }
 
-export default Home
+export default LandingPage

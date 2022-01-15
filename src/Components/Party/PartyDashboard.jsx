@@ -38,8 +38,9 @@ const PartyDashboard = () => {
          <div className='welcome-main'>
              <div className="welcome">
                 <h1>{"Welcome "+userData.Candidate_name}</h1>
-                <p>Hello {userData.Email}</p>
+                
              </div>
+             <p>{userData.Email}</p>
          </div>
         </>
     )
