@@ -12,7 +12,7 @@ function AdminVoter() {
   const [checkStat, setCheckStat] = useState('');
 
   const Verify = async (_id) => {
-      const response = await axios.put(`http://localhost:3002/api/Voter/verify`, {
+      const response = await axios.put(`http://35.154.226.25:3002/api/Voter/verify`, {
         id: _id
       });
   
@@ -23,7 +23,7 @@ function AdminVoter() {
   
   //sending deactivation to server
     const NotVerify = async (_id) => {
-      const response = await axios.put(`http://localhost:3002/api/Voter/decline`, {
+      const response = await axios.put(`http://35.154.226.25:3002/api/Voter/decline`, {
         id: _id
       });
   
@@ -38,11 +38,11 @@ function AdminVoter() {
     useEffect(async () => {
       try {
         //Verified Voter
-        const res1 = await axios.get('http://localhost:3002/api/activeVoters');
+        const res1 = await axios.get('http://35.154.226.25:3002/api/activeVoters');
         setVoters(res1.data.data1);
   
         //Not Verified Voters
-        const res2 = await axios.get('http://localhost:3002/api/deactiveVoters');
+        const res2 = await axios.get('http://35.154.226.25:3002/api/deactiveVoters');
         setnvVoters(res2.data.data2);
       } catch (error) {
         console.log(error)

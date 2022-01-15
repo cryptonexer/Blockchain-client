@@ -8,7 +8,7 @@ const VoterProfile = () => {
     const [userData,setUserData] = useState([]);
 
     const Voterdetails = async () => {
-        const req = await fetch('http://localhost:3002/api/voter/me',{
+        const req = await fetch('http://35.154.226.25:3002/api/voter/me',{
             headers:{
                 'x-access-token' : localStorage.getItem('token'),
             }
