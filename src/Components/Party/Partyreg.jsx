@@ -19,7 +19,7 @@ const Partyreg = () => {
     const Postdata = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://35.154.226.25:3002/api/party/register',{
+        const response = await fetch('http://localhost:3002/api/party/register',{
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'

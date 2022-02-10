@@ -12,7 +12,7 @@ const Adminlogin = () => {
     const Postdata = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://35.154.226.25:3002/api/adlogin', {
+        const response = await fetch('http://localhost:3002/api/adlogin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

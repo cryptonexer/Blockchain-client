@@ -17,7 +17,7 @@ const Topbar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
 
-                  <LinkContainer to="/">
+                  <LinkContainer to="/VoterDashboard">
                   <Nav.Link>Home</Nav.Link>
                   </LinkContainer>
 

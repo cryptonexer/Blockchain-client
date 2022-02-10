@@ -6,7 +6,7 @@ import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 import Ballot from './Votingballot'
 const host = process.env.HOST
-console.log(process.env.HOST);
+//console.log(process.env.HOST);
 
 const VoterDashboard = () => {
 
@@ -14,7 +14,7 @@ const VoterDashboard = () => {
     
 
     const Welcome = async () => {
-        const req = await fetch('http://35.154.226.25:3002/api/voter/me',{
+        const req = await fetch('http://localhost:3002/api/voter/me',{
             headers:{
                 'x-access-token' : localStorage.getItem('token'),
             }
